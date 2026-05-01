@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliate Support – Digital Detox Academy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a73e8;
+      --dark: #1a1a2e;
+      --mid: #2d2d44;
+      --gold: #f4a017;
+      --green: #28a745;
+      --light-bg: #f7f8fc;
+      --text: #2a2a3d;
+      --text-light: #555570;
+      --white: #ffffff;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--light-bg); line-height: 1.7; font-size: 16px; }
+    a { color: var(--primary); }
+
+    /* HEADER */
+    .hero {
+      background: linear-gradient(135deg, var(--dark), var(--mid));
+      color: var(--white);
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+    .hero .tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 { font-size: clamp(24px, 4vw, 42px); font-weight: 800; line-height: 1.25; max-width: 720px; margin: 0 auto 14px; }
+    .hero p { color: #aab0d0; font-size: 18px; max-width: 580px; margin: 0 auto; }
+
+    /* LAYOUT */
+    .wrap { max-width: 860px; margin: 0 auto; padding: 60px 20px; }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+    }
+    @media (max-width: 600px) { .card { padding: 24px 20px; } }
+    h2 { font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+    h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 10px; margin-top: 24px; }
+    h3:first-child { margin-top: 0; }
+    p { color: var(--text-light); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: var(--text); }
+    ul { margin-left: 22px; margin-bottom: 14px; }
+    ul li { color: var(--text-light); margin-bottom: 8px; }
+
+    /* PROVISION BOX */
+    .provision-box {
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border: 2px solid var(--green);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .provision-num {
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+    }
+    .provision-box p { color: #2d5a2d; margin-bottom: 0; }
+    .provision-box strong { color: #1a3d1a; }
+
+    /* PROMOLINK */
+    .promolink-box {
+      background: #eef4fd;
+      border: 2px dashed var(--primary);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .promolink-box p { color: var(--text); font-size: 15px; margin-bottom: 8px; }
+    .promolink-box code {
+      display: block;
+      background: var(--dark);
+      color: var(--gold);
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: 'Courier New', monospace;
+      margin-top: 10px;
+      word-break: break-all;
+    }
+
+    /* EMAIL & SOCIAL TEMPLATES */
+    .template-block {
+      background: var(--light-bg);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 22px 26px;
+      margin: 20px 0;
+    }
+    .template-block .tl { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); font-weight: 700; margin-bottom: 8px; }
+    .template-block h4 { font-size: 16px; color: var(--dark); margin-bottom: 12px; }
+    .template-block pre {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      white-space: pre-wrap;
+      line-height: 1.7;
+    }
+
+    .social-block {
+      background: var(--light-bg);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 22px 26px;
+      margin: 20px 0;
+    }
+    .social-block .tl { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #b37800; font-weight: 700; margin-bottom: 8px; }
+    .social-block pre {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      white-space: pre-wrap;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: #6a6a80;
+      font-size: 13px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    footer a { color: #8890b0; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">Affiliate Support</div>
+  <h1>Willkommen im Partnerprogramm der Digital Detox Academy</h1>
+  <p>Hier findest du alles, was du brauchst – Infos, deinen Promolink und fertige Werbetexte.</p>
+</div>
+
+<div class="wrap">
+
+  <!-- PRODUCT INFO -->
+  <div class="card">
+    <h2>Das Produkt auf einen Blick</h2>
+    <p><strong>Produktname:</strong> Digital Detox Academy – Starke Handynutzung besiegen &amp; digitale Freiheit zurückgewinnen</p>
+    <p><strong>Format:</strong> eBook (PDF) mit ausfüllbaren Arbeitsblättern</p>
+    <p><strong>Preis:</strong> 34,99 € (einmalig)</p>
+    <p><strong>Umfang:</strong> 6 Wochen, 6 Module, 30+ Lektionen, 7 psychologische Methoden</p>
+    <h3>Zielgruppe</h3>
+    <p>Menschen zwischen 20 und 50 Jahren, die das Gefühl haben, ihr Smartphone zu viel zu nutzen und sich dabei schlecht fühlen. Sie haben bereits Tipps versucht, Limits gesetzt, Apps gelöscht – und sind immer wieder zurückgefallen. Sie suchen keine weiteren Quick-Fixes, sondern echten, nachhaltigen Wandel.</p>
+    <p>Besonders angesprochen: Personen, die unter der Scham-Sucht-Spirale leiden, die unter Schlafmangel durch Scrollen leiden, oder die das Gefühl haben, ihre Zeit nicht selbst zu gestalten.</p>
+  </div>
+
+  <!-- WHY IT CONVERTS -->
+  <div class="card">
+    <h2>Warum dieses Produkt gut konvertiert</h2>
+
+    <h3>1. Emotionaler Schmerz + klare Lösung</h3>
+    <p>Das Problem – zu viel scrollen, Scham, Kontrollverlust – ist allgegenwärtig und persönlich. Gleichzeitig gibt es eine klare, strukturierte Lösung. Das schafft hohe Kaufbereitschaft.</p>
+
+    <h3>2. Das Vorwort trifft sofort</h3>
+    <p>Schon der Kernsatz aus dem Vorwort – <em>„Du kämpfst nicht gegen deine Schwäche, du kämpfst gegen ein System, das Milliarden ausgibt, um dich genau dort zu halten"</em> – löst sofort ein Erkennungsmoment aus: „Das bin ich."</p>
+
+    <h3>3. Wissenschaftliche Glaubwürdigkeit</h3>
+    <p>KVT, ACT, Urge Surfing, Neuropsychologie – keine leeren Versprechen, sondern nachweislich wirksame Methoden. Das gibt skeptischen Käufern das nötige Vertrauen.</p>
+
+    <h3>4. Niedrige Preishürde, hoher Wert</h3>
+    <p>34,99 € für ein 6-Wochen-Programm mit ausfüllbaren Arbeitsblättern ist ein sehr zugänglicher Einstieg. Die wahrgenommene Qualität übersteigt den Preis deutlich.</p>
+
+  </div>
+
+  <!-- PROVISION -->
+  <div class="provision-box">
+    <div class="provision-num">60 %</div>
+    <div>
+      <p><strong>Empfohlene Affiliate-Provision: 60 %</strong></p>
+      <p>Bei einem Verkaufspreis von 34,99 € verdienst du <strong>~20,99 €</strong> pro vermitteltem Kauf (vor Steuern und Digistore24-Gebühren).</p>
+      <p>Ausgezahlt wird über Digistore24 nach den Auszahlungsbedingungen der Plattform.</p>
+    </div>
+  </div>
+
+  <!-- PROMOLINK -->
+  <div class="card">
+    <h2>Dein persönlicher Promolink</h2>
+    <p>Verwende ausschließlich deinen persönlichen Affiliate-Link. Er sorgt dafür, dass dir deine Vermittlungen korrekt zugeordnet werden.</p>
+    <div class="promolink-box">
+      <p>Dein Affiliate-Link (nach Registrierung bei Digistore24):</p>
+      <code>https://www.digistore24.com/redir/PRODUKT-ID/DEIN-AFFILIATE-NAME/</code>
+      <p style="font-size: 13px; color: #8890b0; margin-top: 10px;">Den genauen Link findest du nach dem Login in deinem Digistore24-Affiliate-Dashboard.</p>
+    </div>
+  </div>
+
+  <!-- EMAIL TEMPLATES -->
+  <div class="card">
+    <h2>3 fertige Werbe-E-Mails für Affiliates</h2>
+    <p>Kopiere diese E-Mails direkt in dein Newsletter-Tool. Ersetze <strong>[DEIN AFFILIATE-LINK]</strong> durch deinen persönlichen Promolink.</p>
+
+    <div class="template-block">
+      <div class="tl">E-Mail 1 – Emotionaler Einstieg</div>
+      <h4>Betreff: Wann hast du zuletzt dein Handy benutzt, ohne es zu wollen?</h4>
+      <pre>
+Hey [Name],
+
+ich habe letzte Woche eine Frage gestellt und seitdem nicht mehr losgelassen:
+
+Wann hast du zuletzt dein Handy weggelegt – und es nicht 3 Minuten später wieder aufgehoben?
+
+Wenn du lange nachdenken musst, bist du nicht allein.
+
+Das Durchschnitts-Smartphone wird über 2.600 Mal pro Tag berührt. Nicht weil wir so abhängig sind. Sondern weil Apps buchstäblich so gebaut wurden, dass wir nicht aufhören können.
+
+Ein Freund von mir hat mir ein Programm gezeigt, das das anders erklärt als alles, was ich bisher gelesen habe: Es geht nicht um Disziplin. Es geht um Neuropsychologie, Trigger und System-Design.
+
+Das Programm heißt Digital Detox Academy. 6 Wochen, wissenschaftlich fundiert, mit echten Methoden aus der Verhaltenstherapie.
+
+→ [DEIN AFFILIATE-LINK]
+
+Schau einfach mal rein. Es könnte sein, dass du dort findest, was du schon lange gesucht hast.
+
+Herzlich,
+[Dein Name]
+      </pre>
+    </div>
+
+    <div class="template-block">
+      <div class="tl">E-Mail 2 – Wissenschaftlicher Ansatz</div>
+      <h4>Betreff: Was Slots und TikTok gemeinsam haben (und wie du rauskommst)</h4>
+      <pre>
+Hey [Name],
+
+hier eine Zahl, die mich nicht loslässt:
+
+Wer sein Handy nachts ins Bett mitnimmt, schläft durchschnittlich 47 Minuten später ein.
+
+Das ist keine Meinung – das zeigen Schlafstudien. Und der Grund hat nichts mit Gewohnheit zu tun, sondern mit Dopamin und variablen Belohnungsintervallen – demselben Mechanismus, der auch Spielautomaten so unwiderstehlich macht.
+
+Instagram, TikTok, WhatsApp – sie alle nutzen dieses Prinzip. Du scrollst, weil dein Gehirn auf den nächsten „Treffer" wartet. Und der kommt manchmal. Genau das hält dich drin.
+
+Wenn du das endlich durchbrechen willst – nicht mit Willenskraft, sondern mit dem Verständnis, das wirklich hilft – dann schau dir das hier an:
+
+→ [DEIN AFFILIATE-LINK]
+
+Die Digital Detox Academy erklärt genau diesen Mechanismus und gibt dir Schritt für Schritt Werkzeuge, um ihn zu unterbrechen.
+
+Grüße,
+[Dein Name]
+      </pre>
+    </div>
+
+    <div class="template-block">
+      <div class="tl">E-Mail 3 – Direktes Angebot</div>
+      <h4>Betreff: 34,99 € – das komplette 6-Wochen-Programm</h4>
+      <pre>
+Hey [Name],
+
+kurz und direkt:
+
+Wenn du das Gefühl kennst, dein Handy zu viel zu benutzen – und dich dabei schlecht zu fühlen – gibt es jetzt ein Programm, das ich dir empfehlen möchte.
+
+Die Digital Detox Academy ist ein 6-Wochen-Intensivprogramm mit wissenschaftlich erprobten Methoden (KVT, ACT, Urge Surfing), 30+ Lektionen und ausfüllbaren Arbeitsblättern.
+
+Preis: 34,99 € einmalig.
+
+→ [DEIN AFFILIATE-LINK]
+
+Falls du schon viele Tipps versucht hast und diesmal etwas wirklich anderes suchst: Das hier könnte es sein.
+
+[Dein Name]
+      </pre>
+    </div>
+  </div>
+
+  <!-- SOCIAL TEMPLATES -->
+  <div class="card">
+    <h2>3 Textvorlagen für Social Media</h2>
+    <p>Ersetze <strong>[LINK]</strong> durch deinen Affiliate-Link. Passe den Ton gerne an deine Stimme an.</p>
+
+    <div class="social-block">
+      <div class="tl">Post 1 – Provokante Frage</div>
+      <pre>
+Wann hast du zuletzt dein Handy benutzt, ohne es zu wollen?
+
+Ich habe diese Frage letzte Woche gestellt – und lange nachgedacht.
+
+Es gibt ein Programm, das erklärt, warum das so ist. Und wie du rauskommst – ohne Willenskraft-Marathon.
+
+→ [LINK]
+
+#DigitalDetox #SocialMediaPause #HandyFrei #BildschirmzeitReduzieren
+      </pre>
+    </div>
+
+    <div class="social-block">
+      <div class="tl">Post 2 – Wissenschaft / Überraschung</div>
+      <pre>
+Wusstest du das?
+
+📱 Wer nachts scrollt, schläft durchschnittlich 47 Minuten später ein.
+🎰 Apps nutzen denselben Mechanismus wie Spielautomaten: variable Belohnung.
+🧠 Dein Gehirn ist buchstäblich auf Dopamin-Suche – nicht du.
+
+Es liegt nicht an dir. Es liegt am Design.
+
+Mehr dazu: [LINK]
+
+#Neuropsychologie #Dopamin #DigitalWellbeing
+      </pre>
+    </div>
+
+    <div class="social-block">
+      <div class="tl">Post 3 – Direktes Angebot mit CTA</div>
+      <pre>
+Du willst weniger scrollen – aber alleine kommt du nicht raus?
+
+Die Digital Detox Academy ist ein 6-Wochen-Programm mit echten psychologischen Methoden (KVT, ACT, Urge Surfing).
+
+34,99 € einmalig. Kein Abo. Sofortiger Download.
+
+→ [LINK]
+
+#DigitalDetox #HandysuchtÜberwinden #DigiltaleFreiheit
+      </pre>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Digital Detox Academy · Affiliate Support · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+  <p style="margin-top: 8px;">Alle Käufe werden über Digistore24 abgewickelt.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Willkommen bei der Digital Detox Academy – Dein Kauf war erfolgreich!</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a73e8;
+      --dark: #1a1a2e;
+      --gold: #f4a017;
+      --green: #28a745;
+      --light-bg: #f7f8fc;
+      --text: #2a2a3d;
+      --text-light: #555570;
+      --white: #ffffff;
+      --radius: 14px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light-bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* HEADER */
+    .top-bar {
+      background: var(--dark);
+      color: #aab0d0;
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #2d2d44 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 70px 20px 60px;
+    }
+    .checkmark-circle {
+      width: 90px; height: 90px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 44px;
+      margin: 0 auto 28px;
+      box-shadow: 0 0 40px rgba(40,167,69,0.4);
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 46px);
+      font-weight: 800;
+      line-height: 1.25;
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero .sub {
+      font-size: 18px;
+      color: #c8cde8;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* CONTENT */
+    .content { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
+    section.block {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+    }
+    @media (max-width: 600px) { section.block { padding: 28px 22px; } }
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+    p { color: var(--text-light); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: var(--text); }
+
+    /* DOWNLOAD BOX */
+    .download-box {
+      background: #eef4fd;
+      border: 2px dashed var(--primary);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .download-box .icon { font-size: 40px; margin-bottom: 12px; }
+    .download-box h3 { color: var(--dark); margin-bottom: 8px; }
+    .btn-download {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 50px;
+      margin-top: 16px;
+      transition: background .2s;
+    }
+    .btn-download:hover { background: #1558b0; color: var(--white); }
+    .download-note { font-size: 13px; color: #8890b0; margin-top: 12px; }
+
+    /* MODULE PREVIEW */
+    .module-preview {
+      background: linear-gradient(135deg, var(--dark), #2d2d44);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 600px) { .module-preview { padding: 28px 22px; } }
+    .module-preview .tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .module-preview h2 { color: var(--white); margin-bottom: 12px; }
+    .module-preview p { color: #9aa0c0; }
+    .module-preview blockquote {
+      border-left: 4px solid var(--gold);
+      padding: 14px 20px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 0 10px 10px 0;
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .steps { list-style: none; margin-top: 16px; }
+    .steps li {
+      padding: 10px 0 10px 36px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #c8cde8;
+    }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before {
+      content: attr(data-num);
+      position: absolute;
+      left: 0;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 12px;
+      font-weight: 700;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* BILLING NOTE */
+    .billing-note {
+      background: #fff8e1;
+      border-left: 5px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: #6a6a80;
+      font-size: 13px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    footer a { color: #8890b0; }
+    footer .sep { margin: 0 8px; }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">Digital Detox Academy · Kauf erfolgreich ✓</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="checkmark-circle">✓</div>
+  <h1>Herzlich willkommen!<br><span>Du hast gerade eine gute Entscheidung getroffen.</span></h1>
+  <p class="sub">Du hast den ersten Schritt gemacht – und genau dieser erste Schritt zählt. Jetzt geht es los.</p>
+</div>
+
+<div class="content">
+
+  <!-- WELCOME -->
+  <section class="block">
+    <h2>Liebe(r) Käufer:in,</h2>
+    <p>ich freue mich wirklich, dass du hier bist. Nicht weil du „Kunde" bist – sondern weil ich weiß, dass dieser Entschluss etwas bedeutet. Du hast dich entschieden, es diesmal anders anzugehen. <strong>Nicht mit mehr Willenskraft. Sondern mit dem richtigen System.</strong></p>
+    <p>Vielleicht hast du schon viel versucht. Vielleicht bist du skeptisch, ob das hier wirklich etwas verändert. Das ist völlig okay. Du musst mir nichts glauben – du wirst es erleben.</p>
+    <p>Die nächsten 6 Wochen können wirklich etwas in dir verschieben. Nicht weil du dich zwingst. Sondern weil du endlich verstehst, was in dir passiert – und lernst, damit umzugehen.</p>
+    <p>Du hast den ersten Schritt gemacht. <strong>Und der zählt.</strong></p>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="block">
+    <h2>📥 Dein eBook – hier herunterladen</h2>
+    <p>Dein Zugang zur Digital Detox Academy steht bereit. Klicke auf den Button, um dein Programm sofort herunterzuladen:</p>
+
+    <div class="download-box">
+      <div class="icon">📘</div>
+      <h3>Digital Detox Academy</h3>
+      <p style="font-size:15px; color: #555570;">6-Wochen-Intensivprogramm · PDF · Alle Arbeitsblätter inklusive</p>
+      <a href="PLATZHALTER-DOWNLOAD-LINK" class="btn-download">Jetzt herunterladen →</a>
+      <p class="download-note">Falls der Button nicht funktioniert, kopiere diesen Link in deinen Browser:<br><em>PLATZHALTER-DOWNLOAD-LINK</em></p>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 15px;">Du hast auch eine Bestätigungs-E-Mail mit dem Downloadlink erhalten. Falls du sie nicht siehst, check kurz deinen Spam-Ordner.</p>
+  </section>
+
+  <!-- MODULE 1 PREVIEW -->
+  <div class="module-preview">
+    <div class="tag">Starte heute noch</div>
+    <h2>Modul 1: Dein Gehirn verstehen – das Dopamin-Kapitel</h2>
+    <p>Das erste Modul wird dir wahrscheinlich eine Erleichterung sein. Nicht weil es leicht ist – sondern weil du zum ersten Mal wirklich verstehst, was passiert.</p>
+
+    <blockquote>
+      „Du kämpfst nicht gegen deine Schwäche. Du kämpfst gegen ein System, das Milliarden ausgibt, um dich genau dort zu halten."
+    </blockquote>
+
+    <p>In Modul 1 lernst du:</p>
+    <ul class="steps">
+      <li data-num="1">Wie der Dopamin-Loop funktioniert – und warum Scrollen so verdammt schwer aufzuhören ist</li>
+      <li data-num="2">Warum variable Belohnung dein Gehirn in eine Endlosschleife schickt</li>
+      <li data-num="3">Was das mit Spielautomaten gemein hat – und warum du nicht „schwach" bist</li>
+      <li data-num="4">Dein persönliches Nutzungsprofil: Wo stehst du gerade?</li>
+    </ul>
+
+    <p style="margin-top: 16px; color: #8890b0;">Tipp: Lies das Vorwort und Modul 1 heute noch. Schon das erste Kapitel kann etwas in dir verändern.</p>
+  </div>
+
+  <!-- BILLING NOTE -->
+  <section class="block billing-note">
+    <h2>💳 Deine Abrechnung</h2>
+    <p>Die Abwicklung deines Kaufs – inklusive Rechnung und Zahlungsverarbeitung – erfolgt über <strong>Digistore24</strong>. Du erhältst deine Kaufbestätigung und Rechnung direkt von Digistore24 per E-Mail.</p>
+    <p>Bei Fragen zur Zahlung, Rechnung oder Rückgabe wende dich bitte an den Digistore24 Support: <a href="https://www.digistore24.com/kontakt" target="_blank">www.digistore24.com/kontakt</a></p>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="block">
+    <h2>Auf gute 6 Wochen 🙌</h2>
+    <p>Du fängst heute an. Nicht irgendwann, nicht „wenn die Zeit besser ist" – heute. Und ich bin überzeugt, dass diese 6 Wochen für dich etwas verändern werden.</p>
+    <p>Wenn du Fragen zum Programm hast, erreichst du mich unter: <strong>PLATZHALTER-EMAIL-ADRESSE</strong></p>
+    <p>Alles Gute – und viel Freude auf dem Weg zur digitalen Freiheit.</p>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="#">Impressum</a>
+    <span class="sep">·</span>
+    <a href="#">Datenschutzerklärung</a>
+    <span class="sep">·</span>
+    <a href="#">Widerrufsrecht</a>
+  </div>
+  <p style="margin-top: 10px;">Die Abwicklung des Kaufs erfolgt über <strong>Digistore24</strong>, den autorisierten Zahlungsdienstleister.</p>
+  <p style="margin-top: 6px;">© 2026 Digital Detox Academy · Alle Rechte vorbehalten</p>
+</footer>
+
+</body>
+</html>
