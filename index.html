@@ -376,7 +376,7 @@
 <footer>
   <div class="container">
     <p>
-      <a href="#">Impressum</a>
+      <a href="/impressum">Impressum</a>
       <span class="sep">·</span>
       <a href="#">Datenschutzerklärung</a>
       <span class="sep">·</span>
@@ -387,6 +387,16 @@
   </div>
 </footer>
 
+<script>
+(function() {
+  var s = document.createElement("script");
+  s.src = "https://www.digistore24-scripts.com/service/digistore.js";
+  s.onload = function() {
+    digistorePromocode({ "product_id": 689395, "adjust_domain": true });
+  };
+  document.head.appendChild(s);
+})();
+</script>
 <script>
 (function() {
   var s = document.createElement("script");
