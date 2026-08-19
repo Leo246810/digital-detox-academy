@@ -6,93 +6,112 @@
   <title>Impressum – Phone Free Life E-Book</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f8fc; color: #2a2a3d; line-height: 1.7; font-size: 16px; }
-    .container { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
-    h1 { font-size: 32px; font-weight: 800; color: #1a1a2e; margin-bottom: 32px; }
-    h2 { font-size: 20px; font-weight: 700; color: #1a1a2e; margin-top: 32px; margin-bottom: 12px; }
-    p { color: #555570; margin-bottom: 12px; }
-    a { color: #1a73e8; }
-    .back { display: inline-block; margin-bottom: 32px; color: #1a73e8; text-decoration: none; font-size: 14px; }
-    footer { background: #1a1a2e; color: #6a6a80; font-size: 13px; padding: 28px 20px; text-align: center; margin-top: 60px; }
+    :root {
+      --primary: #1a73e8;
+      --dark: #1a1a2e;
+      --mid: #2d2d44;
+      --gold: #f4a017;
+      --light-bg: #f7f8fc;
+      --text: #2a2a3d;
+      --text-light: #555570;
+      --white: #ffffff;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--light-bg); line-height: 1.7; font-size: 16px; }
+    a { color: var(--primary); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--dark), var(--mid));
+      color: var(--white);
+      padding: 50px 20px 40px;
+      text-align: center;
+    }
+    .hero .tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; }
+
+    .wrap { max-width: 720px; margin: 0 auto; padding: 50px 20px; }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    @media (max-width: 600px) { .card { padding: 24px 20px; } }
+    h2 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px; margin-top: 26px; }
+    h2:first-child { margin-top: 0; }
+    p { color: var(--text-light); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: var(--text); }
+
+    footer {
+      background: var(--dark);
+      color: #6a6a80;
+      font-size: 13px;
+      padding: 28px 20px;
+      text-align: center;
+    }
     footer a { color: #8890b0; }
-    footer .sep { margin: 0 8px; }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <a href="/" class="back">← Zurück zur Startseite</a>
-
+<div class="hero">
+  <div class="tag">Rechtliches</div>
   <h1>Impressum</h1>
+</div>
 
-  <h2>Angaben gemäß § 5 TMG</h2>
-  <p>
-    Leonhardt Dörsch<br>
-    Von-Kühlmann-Straße 9<br>
+<div class="wrap">
+
+  <div class="card">
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>Leonhardt Dörsch<br>
+    Ludwig-von-Beer-Straße 9<br>
     82327 Tutzing<br>
-    Deutschland
-  </p>
+    Deutschland</p>
 
-  <h2>Kontakt</h2>
-  <p>
-    Telefon: +49 177 2343115<br>
-    E-Mail: <a href="mailto:phonefreelife@gmail.com">phonefreelife@gmail.com</a>
-  </p>
+    <h2>Kontakt</h2>
+    <p>Telefon: +49 177 2343115<br>
+    E-Mail: <a href="mailto:phonefreelife@gmail.com">phonefreelife@gmail.com</a></p>
 
-  <h2>Hinweis zur Kleinunternehmerregelung</h2>
-  <p>
-    Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.
-  </p>
+    <h2>Hinweis zur Kleinunternehmerregelung</h2>
+    <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
 
-  <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-  <p>
-    Leonhardt Dörsch<br>
-    Von-Kühlmann-Straße 9<br>
-    82327 Tutzing
-  </p>
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>Leonhardt Dörsch<br>
+    Ludwig-von-Beer-Straße 9<br>
+    82327 Tutzing</p>
 
-  <h2>Streitschlichtung</h2>
-  <p>
-    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-    <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>
-  </p>
-  <p>
-    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-    Verbraucherschlichtungsstelle teilzunehmen.
-  </p>
+    <h2>Streitschlichtung</h2>
+    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a></p>
+    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
-  <h2>Haftung für Inhalte</h2>
-  <p>
-    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
-    allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
-    verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
-    zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-  </p>
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
 
-  <h2>Haftung für Links</h2>
-  <p>
-    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-    Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-    verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-  </p>
+    <h2>Haftung für Links</h2>
+    <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
 
-  <h2>Urheberrecht</h2>
-  <p>
-    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
-    Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
-    Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-  </p>
+    <h2>Urheberrecht</h2>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+  </div>
+
 </div>
 
 <footer>
-  <div>
-    <a href="/">Startseite</a>
-    <span class="sep">·</span>
-    <a href="impressum">Impressum</a>
-    <span class="sep">·</span>
-    <a href="datenschutz">Datenschutzerklärung</a>
-  </div>
-  <p style="margin-top: 10px;">© 2026 Phone Free Life E-Book · Alle Rechte vorbehalten</p>
+  <p>Phone Free Life E-Book · <a href="index.html">Affiliate Support</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
 </footer>
 
 </body>
