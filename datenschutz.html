@@ -6,132 +6,139 @@
   <title>Datenschutzerklärung – Phone Free Life E-Book</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f8fc; color: #2a2a3d; line-height: 1.7; font-size: 16px; }
-    .container { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
-    h1 { font-size: 32px; font-weight: 800; color: #1a1a2e; margin-bottom: 32px; }
-    h2 { font-size: 20px; font-weight: 700; color: #1a1a2e; margin-top: 32px; margin-bottom: 12px; }
-    p { color: #555570; margin-bottom: 12px; }
-    a { color: #1a73e8; }
-    .back { display: inline-block; margin-bottom: 32px; color: #1a73e8; text-decoration: none; font-size: 14px; }
-    footer { background: #1a1a2e; color: #6a6a80; font-size: 13px; padding: 28px 20px; text-align: center; margin-top: 60px; }
+    :root {
+      --primary: #1a73e8;
+      --dark: #1a1a2e;
+      --mid: #2d2d44;
+      --gold: #f4a017;
+      --light-bg: #f7f8fc;
+      --text: #2a2a3d;
+      --text-light: #555570;
+      --white: #ffffff;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--light-bg); line-height: 1.7; font-size: 16px; }
+    a { color: var(--primary); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--dark), var(--mid));
+      color: var(--white);
+      padding: 50px 20px 40px;
+      text-align: center;
+    }
+    .hero .tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; }
+
+    .wrap { max-width: 720px; margin: 0 auto; padding: 50px 20px; }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    @media (max-width: 600px) { .card { padding: 24px 20px; } }
+    h2 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px; margin-top: 28px; }
+    h2:first-child { margin-top: 0; }
+    p { color: var(--text-light); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: var(--text); }
+    ul { margin-left: 22px; margin-bottom: 12px; }
+    ul li { color: var(--text-light); margin-bottom: 6px; }
+
+    footer {
+      background: var(--dark);
+      color: #6a6a80;
+      font-size: 13px;
+      padding: 28px 20px;
+      text-align: center;
+    }
     footer a { color: #8890b0; }
-    footer .sep { margin: 0 8px; }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <a href="/" class="back">← Zurück zur Startseite</a>
-
+<div class="hero">
+  <div class="tag">Rechtliches</div>
   <h1>Datenschutzerklärung</h1>
+</div>
 
-  <h2>1. Verantwortlicher</h2>
-  <p>
-    Leonhardt Dörsch<br>
-    Von-Kühlmann-Straße 9<br>
+<div class="wrap">
+
+  <div class="card">
+
+    <h2>1. Verantwortlicher</h2>
+    <p>Leonhardt Dörsch<br>
+    Ludwig-von-Beer-Straße 9<br>
     82327 Tutzing<br>
     Deutschland<br>
     E-Mail: <a href="mailto:phonefreelife@gmail.com">phonefreelife@gmail.com</a><br>
-    Telefon: +49 177 2343115
-  </p>
+    Telefon: +49 177 2343115</p>
 
-  <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
-  <p>
-    Wir erheben auf dieser Webseite nur die personenbezogenen Daten, die für die Abwicklung 
-    des Kaufs notwendig sind. Bei einem Kauf über Digistore24 wird Ihre E-Mail-Adresse 
-    erhoben und verarbeitet, um Ihnen das gekaufte Produkt zuzustellen und Sie über 
-    relevante Informationen zu informieren.
-  </p>
+    <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
+    <p>Wir erheben auf dieser Webseite nur die personenbezogenen Daten, die für die Abwicklung des Kaufs notwendig sind. Bei einem Kauf über Digistore24 wird Ihre E-Mail-Adresse erhoben und verarbeitet, um Ihnen das gekaufte Produkt zuzustellen und Sie über relevante Informationen zu informieren.</p>
 
-  <h2>3. Zweck der Datenverarbeitung</h2>
-  <p>
-    Ihre E-Mail-Adresse wird ausschließlich für folgende Zwecke verwendet:
-  </p>
-  <p>
-    – Zustellung des gekauften eBooks nach erfolgreichem Kauf<br>
-    – Versand von produktbezogenen Informationen und Tipps<br>
-    – Kundenservice und Beantwortung von Anfragen
-  </p>
+    <h2>3. Zweck der Datenverarbeitung</h2>
+    <p>Ihre E-Mail-Adresse wird ausschließlich für folgende Zwecke verwendet:</p>
+    <ul>
+      <li>Zustellung des gekauften eBooks nach erfolgreichem Kauf</li>
+      <li>Versand von produktbezogenen Informationen und Tipps</li>
+      <li>Kundenservice und Beantwortung von Anfragen</li>
+    </ul>
 
-  <h2>4. Rechtsgrundlage</h2>
-  <p>
-    Die Verarbeitung Ihrer E-Mail-Adresse erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO 
-    (Vertragserfüllung) sowie Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), soweit Sie dem 
-    Newsletter-Empfang zugestimmt haben.
-  </p>
+    <h2>4. Rechtsgrundlage</h2>
+    <p>Die Verarbeitung Ihrer E-Mail-Adresse erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) sowie Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), soweit Sie dem Newsletter-Empfang zugestimmt haben.</p>
 
-  <h2>5. Zahlungsabwicklung durch Digistore24</h2>
-  <p>
-    Die Abwicklung des Kaufs erfolgt über Digistore24 GmbH, Nordstraße 15, 06886 Lutherstadt 
-    Wittenberg, Deutschland. Digistore24 verarbeitet Ihre Zahlungsdaten und personenbezogenen 
-    Daten gemäß deren eigener Datenschutzerklärung. Diese finden Sie unter: 
-    <a href="https://www.digistore24.com/datenschutz" target="_blank">www.digistore24.com/datenschutz</a>
-  </p>
+    <h2>5. Zahlungsabwicklung durch Digistore24</h2>
+    <p>Die Abwicklung des Kaufs erfolgt über Digistore24 GmbH, Nordstraße 15, 06886 Lutherstadt Wittenberg, Deutschland. Digistore24 verarbeitet Ihre Zahlungsdaten und personenbezogenen Daten gemäß deren eigener Datenschutzerklärung. Diese finden Sie unter: <a href="https://www.digistore24.com/datenschutz" target="_blank" rel="noopener">www.digistore24.com/datenschutz</a></p>
 
-  <h2>6. E-Mail-Marketing über Brevo</h2>
-  <p>
-    Für den Versand von E-Mails nach dem Kauf nutzen wir den Dienst Brevo (ehemals Sendinblue), 
-    Köpenicker Straße 126, 10179 Berlin. Ihre E-Mail-Adresse wird nach dem Kauf an Brevo 
-    übermittelt, um Ihnen produktbezogene E-Mails zuzustellen. Die Datenschutzerklärung von 
-    Brevo finden Sie unter: 
-    <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank">www.brevo.com/de/legal/privacypolicy/</a>
-  </p>
+    <h2>6. E-Mail-Marketing über Brevo</h2>
+    <p>Für den Versand von E-Mails nach dem Kauf nutzen wir den Dienst Brevo (ehemals Sendinblue), Köpenicker Straße 126, 10179 Berlin. Ihre E-Mail-Adresse wird nach dem Kauf an Brevo übermittelt, um Ihnen produktbezogene E-Mails zuzustellen. Die Datenschutzerklärung von Brevo finden Sie unter: <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" rel="noopener">www.brevo.com/de/legal/privacypolicy/</a></p>
 
-  <h2>7. Speicherdauer</h2>
-  <p>
-    Ihre E-Mail-Adresse wird gespeichert, solange Sie Kunde sind oder bis Sie der 
-    Verarbeitung widersprechen. Sie können sich jederzeit vom E-Mail-Verteiler abmelden 
-    über den Abmelde-Link in jeder E-Mail.
-  </p>
+    <h2>7. Speicherdauer</h2>
+    <p>Ihre E-Mail-Adresse wird gespeichert, solange Sie Kunde sind oder bis Sie der Verarbeitung widersprechen. Sie können sich jederzeit vom E-Mail-Verteiler abmelden über den Abmelde-Link in jeder E-Mail.</p>
 
-  <h2>8. Ihre Rechte</h2>
-  <p>
-    Sie haben jederzeit das Recht auf:
-  </p>
-  <p>
-    – Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)<br>
-    – Berichtigung unrichtiger Daten (Art. 16 DSGVO)<br>
-    – Löschung Ihrer Daten (Art. 17 DSGVO)<br>
-    – Einschränkung der Verarbeitung (Art. 18 DSGVO)<br>
-    – Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)<br>
-    – Datenübertragbarkeit (Art. 20 DSGVO)
-  </p>
-  <p>
-    Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: 
-    <a href="mailto:phonefreelife@gmail.com">phonefreelife@gmail.com</a>
-  </p>
+    <h2>8. Ihre Rechte</h2>
+    <p>Sie haben jederzeit das Recht auf:</p>
+    <ul>
+      <li>Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
+      <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+      <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
+      <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+      <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+    </ul>
+    <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:phonefreelife@gmail.com">phonefreelife@gmail.com</a></p>
 
-  <h2>9. Beschwerderecht</h2>
-  <p>
-    Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. 
-    Die zuständige Aufsichtsbehörde für Bayern ist das Bayerische Landesamt für 
-    Datenschutzaufsicht (BayLDA): <a href="https://www.lda.bayern.de" target="_blank">www.lda.bayern.de</a>
-  </p>
+    <h2>9. Beschwerderecht</h2>
+    <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Die zuständige Aufsichtsbehörde für Bayern ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA): <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a></p>
 
-  <h2>10. Cookies</h2>
-  <p>
-    Diese Webseite verwendet keine Cookies zu Tracking- oder Analysezwecken.
-  </p>
+    <h2>10. Cookies</h2>
+    <p>Diese Webseite verwendet keine Cookies zu Tracking- oder Analysezwecken.</p>
 
-  <h2>11. SSL-Verschlüsselung</h2>
-  <p>
-    Diese Seite nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung. Eine verschlüsselte 
-    Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf 
-    „https://" wechselt.
-  </p>
+    <h2>11. SSL-Verschlüsselung</h2>
+    <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt.</p>
 
-  <p style="margin-top: 32px; font-size: 14px; color: #8890b0;">Stand: Mai 2026</p>
+    <p style="margin-top: 24px; font-size: 13px;">Stand: Mai 2026</p>
+
+  </div>
+
 </div>
 
 <footer>
-  <div>
-    <a href="/">Startseite</a>
-    <span class="sep">·</span>
-    <a href="impressum">Impressum</a>
-    <span class="sep">·</span>
-    <a href="datenschutz">Datenschutzerklärung</a>
-  </div>
-  <p style="margin-top: 10px;">© 2026 Phone Free Life E-Book · Alle Rechte vorbehalten</p>
+  <p>Phone Free Life E-Book · <a href="index.html">Affiliate Support</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
 </footer>
 
 </body>
